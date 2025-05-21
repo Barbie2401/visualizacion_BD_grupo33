@@ -190,5 +190,16 @@ ax.set_xlabel('Sucursal', fontsize=12)
 ax.set_ylabel('Total Ventas', fontsize=12)
 ax.legend(title='Método de Pago', bbox_to_anchor=(1.05, 1), loc='upper left')
 plt.xticks(rotation=0)
+
+# Agregar los valores encima de cada segmento apilado
+for i, branch in enumerate(branch_payment.index):
+    cumulative = 0
+    for payment_method in branch_payment.columns:
+        value = branch_payment.loc[branch, payment_method]
+        if not np.isnan(value) and value > 0:
+            cumulative += value
+            y = cumulative - value / 2
+            ax.text(i, y, f'{value:.0f}', ha='center', va='center', fontsize=9, color='black')
+
 plt.tight_layout()
 st.pyplot(fig)
