@@ -131,15 +131,15 @@ ax.set_title('Distribución del Gasto por Tipo de Cliente', fontsize=16, fontwei
 ax.set_xlabel('Tipo de Cliente', fontsize=12)
 ax.set_ylabel('Total Gastado', fontsize=12)
 
-fig.text(1.02, 0.5,
-         '🔹 Cada caja representa el gasto total\n'
-         '   para cada tipo de cliente.\n\n'
-         '🔹 La línea horizontal dentro de la caja\n'
-         '   es la **mediana** del gasto.\n\n'
-         '🔹 Los puntos aislados son valores **atípicos**\n'
-         '   (clientes con gastos extremos).\n\n'
-         '🔹 Los diamantes negros representan la **media**.',
-         fontsize=10, va='center', ha='left', color='dimgray')
+# fig.text(1.02, 0.5,
+#          '🔹 Cada caja representa el gasto total\n'
+#          '   para cada tipo de cliente.\n\n'
+#          '🔹 La línea horizontal dentro de la caja\n'
+#          '   es la **mediana** del gasto.\n\n'
+#          '🔹 Los puntos aislados son valores **atípicos**\n'
+#          '   (clientes con gastos extremos).\n\n'
+#          '🔹 Los diamantes negros representan la **media**.',
+#          fontsize=10, va='center', ha='left', color='dimgray')
 
 plt.tight_layout(rect=[0, 0, 0.9, 1])
 st.pyplot(fig)
@@ -165,14 +165,14 @@ ax.set_title('Relación entre Costo y Ganancia Bruta', fontsize=16, fontweight='
 ax.set_xlabel('Costo de Bienes Vendidos (COGS)', fontsize=12)
 ax.set_ylabel('Ingreso Bruto (Gross Income)', fontsize=12)
 
-fig.text(1.02, 0.5,
-         '🔹 Cada punto representa una transacción.\n\n'
-         '🔹 El eje X muestra el costo del producto (cogs).\n\n'
-         '🔹 El eje Y muestra la ganancia generada (gross income).\n\n'
-         '🔹 Los colores indican la sucursal.\n\n'
-         '🔹 Existe una relación lineal positiva:\n'
-         '   mayor costo tiende a generar mayor ganancia.',
-         fontsize=10, va='center', ha='left', color='dimgray')
+# fig.text(1.02, 0.5,
+#          '🔹 Cada punto representa una transacción.\n\n'
+#          '🔹 El eje X muestra el costo del producto (cogs).\n\n'
+#          '🔹 El eje Y muestra la ganancia generada (gross income).\n\n'
+#          '🔹 Los colores indican la sucursal.\n\n'
+#          '🔹 Existe una relación lineal positiva:\n'
+#          '   mayor costo tiende a generar mayor ganancia.',
+#          fontsize=10, va='center', ha='left', color='dimgray')
 
 plt.tight_layout(rect=[0, 0, 0.9, 1])
 st.pyplot(fig)
